@@ -21,10 +21,11 @@ mongoose
   .then(() => {
     console.log("Database connected successfully");
     app.listen(PORT, () => {
-      console.log("App is Running on Port 3000");
+      console.log(`App is Running on Port ${PORT}`);
     });
   })
   .catch((e) => {
-    res.send(e.message);
     console.log(e.message);
+
+    res.send(e.message);
   });
