@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const Route = require("./router/router");
 const cookieParser = require("cookie-parser");
 require("dotenv").config();
+const port = process.env.PORT || 3000;
+
 const app = express();
 
 app.use(express.json());
@@ -24,8 +26,8 @@ mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
     console.log("Database connected successfully");
-    app.listen(3000, () => {
-      console.log(`App is Running on Port 3000`);
+    app.listen(port, () => {
+      console.log(`App is Running on Port `, port);
     });
   })
   .catch((e) => {
