@@ -16,7 +16,9 @@ app.use(
 );
 app.use(cookieParser());
 app.use(Route);
-
+app.get("/", (req, res) => {
+  res.send("Hello");
+});
 mongoose
   .connect(`${MONGO_URL}`)
   .then(() => {
