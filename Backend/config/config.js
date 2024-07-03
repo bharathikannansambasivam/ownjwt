@@ -1,6 +1,6 @@
 const PORT = 3000;
 const MONGO_URL =
-  "mongodb+srv://bharathi:bharathi@authentication.wmbqgo0.mongodb.net/";
+  "mongodb+srv://bharathi:bharathi@authentication.wmbqgo0.mongodb.net/?retryWrites=true&w=majority&appName=Authentication";
 JWT_SECRET = "PASSWORD";
 module.exports = { PORT, MONGO_URL, JWT_SECRET };
 
